@@ -1,6 +1,7 @@
 package guilopes.com.petlife
 
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import guilopes.com.petlife.databinding.ActivityEditPetBinding
 
@@ -13,6 +14,7 @@ class EditPetActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
 
         supportActionBar?.hide()
         setContentView(binding.root)

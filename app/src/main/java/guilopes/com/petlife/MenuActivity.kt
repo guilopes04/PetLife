@@ -2,6 +2,7 @@ package guilopes.com.petlife
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import guilopes.com.petlife.databinding.ActivityMenuBinding
 
@@ -13,6 +14,7 @@ class MenuActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
 
         supportActionBar?.hide()
         setContentView(binding.root)
