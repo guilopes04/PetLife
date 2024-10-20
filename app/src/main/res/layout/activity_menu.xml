@@ -4,13 +4,20 @@
     android:padding="24dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="160dp">
+    android:layout_marginTop="164dp">
+
+    <Button
+        android:id="@+id/btnViewPet"
+        android:text="Visualizar Dados do Pet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnEditPet"
         android:text="Editar Dados do Pet"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/btnEditVetVisit"

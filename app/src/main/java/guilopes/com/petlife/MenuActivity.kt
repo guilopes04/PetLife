@@ -17,6 +17,11 @@ class MenuActivity : AppCompatActivity() {
         supportActionBar?.hide()
         setContentView(binding.root)
 
+        binding.btnViewPet.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnEditPet.setOnClickListener {
             val intent = Intent(this, EditPetActivity::class.java)
             startActivity(intent)
