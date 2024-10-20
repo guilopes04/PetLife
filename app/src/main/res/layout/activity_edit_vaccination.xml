@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="@string/edit_petshop_visit"
+        android:text="@string/edit_vaccination"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@color/primaryDarkColor"
@@ -17,8 +17,8 @@
         android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/etLastPetShopVisit"
-        android:hint="@string/hint_last_petshop_visit"
+        android:id="@+id/etLastVaccination"
+        android:hint="@string/hint_last_vaccination"
         android:textColor="@color/textColorPrimary"
         android:backgroundTint="@color/primaryColor"
         android:layout_width="match_parent"
