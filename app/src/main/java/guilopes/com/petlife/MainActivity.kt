@@ -17,7 +17,9 @@ class MainActivity : AppCompatActivity() {
             size = "Grande",
             lastVeterinarianVisit = "01/06/2020",
             lastVaccination = "15/05/2019",
-            lastPetShopVisit = "10/07/2020"
+            lastPetShopVisit = "10/07/2020",
+            veterianPhone = "16993384804",
+            veterianSite = "www.example@example.com"
         )
     }
 

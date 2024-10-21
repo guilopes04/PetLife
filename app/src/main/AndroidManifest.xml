@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,18 +17,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetLife"
         tools:targetApi="31">
-        <activity
-            android:name=".EditPetShop"
-            android:exported="false" />
-        <activity
-            android:name=".EditVaccination"
-            android:exported="false" />
-        <activity
-            android:name=".EditVeterinarian"
-            android:exported="false" />
-        <activity
-            android:name=".EditPet"
-            android:exported="false" />
         <activity android:name=".EditPetShopActivity" />
         <activity android:name=".EditVaccinationActivity" />
         <activity android:name=".EditVeterinarianActivity" />

@@ -20,7 +20,11 @@
     <string name="hint_color">Cor</string>
     <string name="hint_size">Porte (Pequeno, Médio ou Grande)</string>
     <string name="save">Salvar</string>
+    <string name="call">Ligar</string>
+    <string name="access_webiste">Acessar site</string>
     <string name="hint_last_vet_visit">Última ida ao Veterinário</string>
+    <string name="hint_veterian_phone">Telefone do veterinário</string>
+    <string name="hint_veterian_site">Site do veterinário</string>
     <string name="hint_last_vaccination">Última Vacinação</string>
     <string name="hint_last_petshop_visit">Última ida ao Petshop</string>
     <string name="view_pet">Visualizar Dados do Pet</string>
