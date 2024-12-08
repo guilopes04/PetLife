@@ -30,7 +30,8 @@
             android:textColorHint="@color/textColorSecondary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor"/>
+            android:backgroundTint="@color/primaryColor"
+            android:inputType="textPersonName"/>
 
         <EditText
             android:id="@+id/birthDateEt"
@@ -40,7 +41,9 @@
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor" />
+            android:backgroundTint="@color/primaryColor"
+            android:focusable="false"
+            android:clickable="true"/>
 
         <EditText
             android:id="@+id/typeEt"
@@ -50,7 +53,8 @@
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor" />
+            android:backgroundTint="@color/primaryColor"
+            android:inputType="text"/>
 
         <EditText
             android:id="@+id/colorEt"
@@ -60,7 +64,8 @@
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor" />
+            android:backgroundTint="@color/primaryColor"
+            android:inputType="text"/>
 
         <EditText
             android:id="@+id/sizeEt"
@@ -70,7 +75,8 @@
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor" />
+            android:backgroundTint="@color/primaryColor"
+            android:inputType="text"/>
 
         <EditText
             android:id="@+id/lastVetVisitEt"
@@ -80,7 +86,9 @@
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor" />
+            android:backgroundTint="@color/primaryColor"
+            android:focusable="false"
+            android:clickable="true"/>
 
         <EditText
             android:id="@+id/lastVaccinationEt"
@@ -90,7 +98,9 @@
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor" />
+            android:backgroundTint="@color/primaryColor"
+            android:focusable="false"
+            android:clickable="true"/>
 
         <EditText
             android:id="@+id/lastPetShopVisitEt"
@@ -100,7 +110,9 @@
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor" />
+            android:backgroundTint="@color/primaryColor"
+            android:focusable="false"
+            android:clickable="true"/>
 
         <EditText
             android:id="@+id/veterianPhoneEt"
@@ -121,7 +133,8 @@
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor" />
+            android:backgroundTint="@color/primaryColor"
+            android:inputType="textUri"/>
 
         <Button
             android:id="@+id/saveBt"
