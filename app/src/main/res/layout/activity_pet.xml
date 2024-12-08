@@ -45,31 +45,26 @@
             android:focusable="false"
             android:clickable="true"/>
 
-        <EditText
-            android:id="@+id/typeEt"
-            android:hint="@string/hint_type"
-            android:textColor="@color/textColorPrimary"
-            android:textColorHint="@color/textColorSecondary"
+        <Spinner
+            android:id="@+id/typeSpinner"
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor"
-            android:inputType="text"/>
+            android:entries="@array/animal_types"
+            android:spinnerMode="dropdown" />
+
+
+        <Spinner
+            android:id="@+id/sizeSpinner"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/animal_sizes"
+            android:spinnerMode="dropdown" />
 
         <EditText
             android:id="@+id/colorEt"
             android:hint="@string/hint_color"
-            android:textColor="@color/textColorPrimary"
-            android:textColorHint="@color/textColorSecondary"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor"
-            android:inputType="text"/>
-
-        <EditText
-            android:id="@+id/sizeEt"
-            android:hint="@string/hint_size"
             android:textColor="@color/textColorPrimary"
             android:textColorHint="@color/textColorSecondary"
             android:layout_marginTop="16dp"

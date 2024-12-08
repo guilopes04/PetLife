@@ -1,17 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PetLife</string>
     <string name="pet_data">Dados do Pet</string>
     <string name="add_pet">Adicionar Pet</string>
     <string name="hint_name">Nome</string>
     <string name="hint_birth_date">Data de Nascimento</string>
-    <string name="hint_type">Tipo (Cão ou Gato)</string>
+    <string name="hint_type">Tipo</string>
     <string name="hint_color">Cor</string>
-    <string name="hint_size">Porte (Pequeno, Médio ou Grande)</string>
+    <string name="hint_size">Porte</string>
     <string name="hint_last_vet_visit">Última ida ao Veterinário</string>
     <string name="hint_veterian_phone">Telefone do veterinário</string>
     <string name="hint_veterian_site">Site do veterinário</string>
     <string name="hint_last_vaccination">Última Vacinação</string>
     <string name="hint_last_petshop_visit">Última ida ao Petshop</string>
     <string name="save">Salvar</string>
+
+    <string-array name="animal_types">
+        <item>Cão</item>
+        <item>Gato</item>
+    </string-array>
+
+    <string-array name="animal_sizes">
+        <item>Pequeno</item>
+        <item>Médio</item>
+        <item>Grande</item>
+    </string-array>
 </resources>
