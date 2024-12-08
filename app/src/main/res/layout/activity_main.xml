@@ -1,149 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:background="@color/backgroundColor"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="24dp"
-        android:gravity="center_horizontal"
+    <TextView
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryDarkColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnAddPet"
+        android:text="@string/add_pet"
+        android:layout_marginBottom="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/buttonTextColor"/>
 
-        <TextView
-            android:text="@string/app_name"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/primaryDarkColor"
-            android:layout_marginBottom="24dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"/>
-
-
-        <TextView
-            android:text="@string/pet_name"
-            android:textStyle="bold"
-            android:textColor="@color/textColorPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"/>
-
-        <TextView
-            android:id="@+id/tvName"
-            android:textColor="@color/textColorSecondary"
-            android:layout_marginBottom="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-        <TextView
-            android:text="@string/birth_date"
-            android:textStyle="bold"
-            android:textColor="@color/textColorPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tvBirthDate"
-            android:textColor="@color/textColorSecondary"
-            android:layout_marginBottom="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-        <TextView
-            android:text="@string/type"
-            android:textStyle="bold"
-            android:textColor="@color/textColorPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tvType"
-            android:textColor="@color/textColorSecondary"
-            android:layout_marginBottom="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-        <TextView
-            android:text="@string/color"
-            android:textStyle="bold"
-            android:textColor="@color/textColorPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tvColor"
-            android:textColor="@color/textColorSecondary"
-            android:layout_marginBottom="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-        <TextView
-            android:text="@string/size"
-            android:textStyle="bold"
-            android:textColor="@color/textColorPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tvSize"
-            android:textColor="@color/textColorSecondary"
-            android:layout_marginBottom="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <!-- Últimas Datas -->
-        <TextView
-            android:text="@string/last_vet_visit"
-            android:textStyle="bold"
-            android:textColor="@color/textColorPrimary"
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tvLastVetVisit"
-            android:textColor="@color/textColorSecondary"
-            android:layout_marginBottom="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:text="@string/last_vaccination"
-            android:textStyle="bold"
-            android:textColor="@color/textColorPrimary"
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tvLastVaccination"
-            android:textColor="@color/textColorSecondary"
-            android:layout_marginBottom="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:text="@string/last_petshop_visit"
-            android:textStyle="bold"
-            android:textColor="@color/textColorPrimary"
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tvLastPetShopVisit"
-            android:textColor="@color/textColorSecondary"
-            android:layout_marginBottom="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <!-- Botão para o Menu -->
-        <Button
-            android:id="@+id/btnMenu"
-            android:text="@string/menu"
-            android:backgroundTint="@color/buttonColor"
-            android:textColor="@color/buttonTextColor"
-            android:layout_marginTop="24dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-</ScrollView>
+    <ListView
+        android:id="@+id/petLv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"/>
+</LinearLayout>
