@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PetLife</string>
-    <string name="pet_data">Dados do Pet</string>
-    <string name="add_pet">Adicionar Pet</string>
+    <string name="pet_name">Nome:</string>
+    <string name="birth_date">Data de Nascimento:</string>
+    <string name="type">Tipo:</string>
+    <string name="color">Cor:</string>
+    <string name="size">Porte:</string>
+    <string name="last_vet_visit">Última ida ao Veterinário:</string>
+    <string name="last_vaccination">Última Vacinação:</string>
+    <string name="last_petshop_visit">Última ida ao Petshop:</string>
+    <string name="menu">Menu</string>
+    <string name="edit_pet_data">Editar Dados do Pet</string>
+    <string name="edit_vet_visit">Editar Última Ida ao Veterinário</string>
+    <string name="edit_vaccination">Editar Última Vacinação</string>
+    <string name="edit_petshop_visit">Editar Última Ida ao Petshop</string>
     <string name="hint_name">Nome</string>
     <string name="hint_birth_date">Data de Nascimento</string>
     <string name="hint_type">Tipo (Cão ou Gato)</string>
     <string name="hint_color">Cor</string>
     <string name="hint_size">Porte (Pequeno, Médio ou Grande)</string>
+    <string name="save">Salvar</string>
+    <string name="call">Ligar</string>
+    <string name="access_webiste">Acessar site</string>
     <string name="hint_last_vet_visit">Última ida ao Veterinário</string>
     <string name="hint_veterian_phone">Telefone do veterinário</string>
     <string name="hint_veterian_site">Site do veterinário</string>
     <string name="hint_last_vaccination">Última Vacinação</string>
     <string name="hint_last_petshop_visit">Última ida ao Petshop</string>
-    <string name="save">Salvar</string>
+    <string name="view_pet">Visualizar Dados do Pet</string>
 </resources>
