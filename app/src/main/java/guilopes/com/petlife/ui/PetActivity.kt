@@ -62,6 +62,7 @@ class PetActivity : AppCompatActivity() {
                 lastPetShopVisitEt.isEnabled = !viewMode
                 veterianPhoneEt.isEnabled = !viewMode
                 veterianSiteEt.isEnabled = !viewMode
+                petEventsBt.visibility = if (!viewMode) View.GONE else View.VISIBLE
                 saveBt.visibility = if (viewMode) View.GONE else View.VISIBLE
             }
         } ?: run {
@@ -94,9 +95,15 @@ class PetActivity : AppCompatActivity() {
                 veterianSite = apb.veterianSiteEt.text.toString(),
             )
             Intent().apply {
-                putExtra(Constant.PET, pet)
+                putExtra(PET, pet)
                 setResult(RESULT_OK, this)
                 finish()
+            }
+        }
+        apb.petEventsBt.setOnClickListener {
+            Intent(this, PetEventsActivity::class.java).apply {
+                putExtra(PET, receivedPet)
+                startActivity(this)
             }
         }
     }

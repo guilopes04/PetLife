@@ -13,6 +13,8 @@
     <string name="hint_last_vaccination">Última Vacinação</string>
     <string name="hint_last_petshop_visit">Última ida ao Petshop</string>
     <string name="save">Salvar</string>
+    <string name="pet_events">Eventos do Pet</string>
+    <string name="add_pet_event">Adicionar Evento</string>
 
     <string-array name="animal_types">
         <item>Cão</item>
@@ -24,4 +26,15 @@
         <item>Médio</item>
         <item>Grande</item>
     </string-array>
+    <string name="add_event">Adicionar Evento</string>
+    <string name="select_date">Selecionar Data</string>
+    <string name="select_time">Selecionar Horario</string>
+    <string name="save_event">Salvar Evento</string>
+    <string-array name="event_types">
+        <item>Vet</item>
+        <item>Vacinação</item>
+        <item>Petshop</item>
+        <item>Medicação</item>
+    </string-array>
+
 </resources>

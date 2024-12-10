@@ -24,6 +24,12 @@ class PetSqliteImpl(
         private const val VETERIAN_PHONE_COLUMN = "veterian_phone"
         private const val VETERIAN_SITE_COLUMN = "veterian_site"
 
+
+        private const val PET_EVENTS_TABLE = "pet_events"
+        private const val DATE_COLUMN = "date"
+        private const val HOUR_COLUMN = "hour"
+        private const val PET_ID_COLUMN = "pet_id"
+
         private const val CREATE_PET_TABLE_STATEMENT =
             "CREATE TABLE IF NOT EXISTS $PET_TABLE (" +
                 "$ID_COLUMN INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
@@ -37,6 +43,14 @@ class PetSqliteImpl(
                 "$LAST_PETSHOP_VISIT_COLUMN TEXT NOT NULL, " +
                 "$VETERIAN_PHONE_COLUMN TEXT NOT NULL, " +
                 "$VETERIAN_SITE_COLUMN TEXT NOT NULL);"
+
+        private const val CREATE_PET_EVENTS_TABLE_STATEMENT =
+            "CREATE TABLE IF NOT EXISTS $PET_EVENTS_TABLE (" +
+                    "$ID_COLUMN INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                    "$PET_ID_COLUMN INTEGER NOT NULL, " +
+                    "$DATE_COLUMN TEXT NOT NULL, " +
+                    "$HOUR_COLUMN TEXT, " +
+                    "$TYPE_COLUMN TEXT NOT NULL);"
     }
 
     private val petDatabase: SQLiteDatabase =
@@ -49,6 +63,7 @@ class PetSqliteImpl(
     init {
         try {
             petDatabase.execSQL(CREATE_PET_TABLE_STATEMENT)
+            petDatabase.execSQL(CREATE_PET_EVENTS_TABLE_STATEMENT)
         } catch (se: SQLException) {
         }
     }
@@ -84,6 +99,17 @@ class PetSqliteImpl(
                 veterianSite = "",
             )
         }
+    }
+
+    override fun createPetEvent(petEvent: PetEvents): Long = petDatabase.insert(PET_EVENTS_TABLE, null, petEventToContentValues(petEvent))
+
+    override fun retrievePetEvents(id: Long): MutableList<PetEvents> {
+        val petEvents = mutableListOf<PetEvents>()
+        val cursor = petDatabase.rawQuery("SELECT * FROM ${PET_EVENTS_TABLE}", null)
+        while (cursor.moveToNext()) {
+            petEvents.add(cursorToPetEvents(cursor))
+        }
+        return petEvents
     }
 
     override fun retrievePets(): MutableList<Pet> {
@@ -124,6 +150,14 @@ class PetSqliteImpl(
             put(VETERIAN_SITE_COLUMN, pet.veterianSite)
         }
 
+    private fun petEventToContentValues(petEvent: PetEvents) =
+        ContentValues().apply {
+            put(TYPE_COLUMN, petEvent.type)
+            put(DATE_COLUMN, petEvent.date)
+            put(HOUR_COLUMN, petEvent.hour)
+            put(PET_ID_COLUMN, petEvent.pet_id)
+        }
+
     private fun cursorToPet(cursor: Cursor) =
         Pet(
             id = cursor.getLong(cursor.getColumnIndexOrThrow(ID_COLUMN)),
@@ -137,5 +171,14 @@ class PetSqliteImpl(
             lastPetShopVisit = cursor.getString(cursor.getColumnIndexOrThrow(LAST_PETSHOP_VISIT_COLUMN)),
             veterianPhone = cursor.getString(cursor.getColumnIndexOrThrow(VETERIAN_PHONE_COLUMN)),
             veterianSite = cursor.getString(cursor.getColumnIndexOrThrow(VETERIAN_SITE_COLUMN)),
+        )
+
+    private fun cursorToPetEvents(cursor: Cursor) =
+        PetEvents(
+            id = cursor.getLong(cursor.getColumnIndexOrThrow(ID_COLUMN)),
+            type = cursor.getString(cursor.getColumnIndexOrThrow(TYPE_COLUMN)),
+            date = cursor.getString(cursor.getColumnIndexOrThrow(DATE_COLUMN)),
+            hour = cursor.getString(cursor.getColumnIndexOrThrow(HOUR_COLUMN)),
+            pet_id = cursor.getLong(cursor.getColumnIndexOrThrow(PET_ID_COLUMN))
         )
 }
