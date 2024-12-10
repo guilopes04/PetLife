@@ -64,6 +64,7 @@ class PetSqliteImpl(
         try {
             petDatabase.execSQL(CREATE_PET_TABLE_STATEMENT)
             petDatabase.execSQL(CREATE_PET_EVENTS_TABLE_STATEMENT)
+            //petDatabase.execSQL("DROP TABLE $PET_EVENTS_TABLE")
         } catch (se: SQLException) {
         }
     }

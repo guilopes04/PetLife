@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class PetEvents(
-    val id: Long = 0,
+    var id: Long = 0,
     val type: String,
     val date: String,
     val hour: String,

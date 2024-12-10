@@ -9,7 +9,6 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import guilopes.com.petlife.R
 import guilopes.com.petlife.databinding.ActivityPetBinding
-import guilopes.com.petlife.model.Constant
 import guilopes.com.petlife.model.Constant.PET
 import guilopes.com.petlife.model.Constant.VIEW_MODE
 import guilopes.com.petlife.model.Pet

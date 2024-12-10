@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import guilopes.com.petlife.R
+import guilopes.com.petlife.controller.MainController
 import guilopes.com.petlife.databinding.ActivityAddPetEventBinding
 import guilopes.com.petlife.model.Constant.PET
 import guilopes.com.petlife.model.Constant.PET_EVENT
@@ -64,24 +65,38 @@ class AddPetEventActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (type == "Medication" && time.isEmpty()) {
+            if (type == "Medicação" && time.isEmpty()) {
                 Toast.makeText(this, getString(R.string.select_time), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             val petEvent = PetEvents(
                 id = 0,
-                type = type ?: "",
-                date = date ?: "",
-                hour = time ?: "",
+                type = type,
+                date = date,
+                hour = if (type == "Medicação") time else "",
                 pet_id = 1
             )
-            Intent().apply {
-                putExtra(PET_EVENT, petEvent)
-                setResult(RESULT_OK, this)
-                finish()
-            }
+
+            Thread {
+                val newId = MainController(this).insertPetEvent(petEvent)
+                if (newId > 0) {
+                    petEvent.id = newId.toInt().toLong()
+                    runOnUiThread {
+                        Intent().apply {
+                            putExtra(PET_EVENT, petEvent)
+                            setResult(RESULT_OK, this)
+                            finish()
+                        }
+                    }
+                } else {
+                    runOnUiThread {
+                        Toast.makeText(this, "Error saving event!", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }.start()
         }
+
     }
 
     private fun showDatePicker() {
